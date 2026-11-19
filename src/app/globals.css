@@ -32,8 +32,8 @@
   --shadow-deep: 0 40px 80px -40px rgba(10, 31, 68, 0.5), 0 16px 32px -20px rgba(10, 31, 68, 0.3);
   --shadow-glow: 0 0 0 1px rgba(191, 10, 48, 0.3), 0 12px 40px -12px rgba(191, 10, 48, 0.5);
 
-  --animate-reveal: reveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
-  --animate-reveal-scale: reveal-scale 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-reveal: reveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-reveal-scale: reveal-scale 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-donate-pulse: donate-pulse 2.6s ease-in-out infinite;
   --animate-shimmer: shimmer 3.2s linear infinite;
   --animate-float: float 7s ease-in-out infinite;
@@ -337,11 +337,22 @@
   }
 
   .reveal {
+    opacity: 1;
     animation: var(--animate-reveal);
   }
 
   .reveal-scale {
+    opacity: 1;
     animation: var(--animate-reveal-scale);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-scale {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
 
   .reveal-delay-1 {
