@@ -72,7 +72,7 @@ export default async function HomePage() {
                 For USA troops · Veterans · Every military family
               </span>
             </div>
-            <h1 className="mt-5 font-display text-[2.35rem] leading-[0.98] font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-[3.6rem]">
+            <h1 className="mt-5 font-display text-[2.35rem] leading-[1.12] font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-[3.6rem]">
               {settings.siteName}
             </h1>
             <p className="mt-4 text-lg leading-relaxed text-fog md:text-xl">

@@ -140,6 +140,9 @@
 @layer utilities {
   .font-display {
     font-family: var(--font-display);
+    /* Fraunces J/g/y descend below the em box — never clip brand type */
+    overflow: visible;
+    text-box-trim: none;
   }
 
   .font-sans {

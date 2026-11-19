@@ -22,9 +22,9 @@ export function SiteFooter({
   contactEmail: string;
 }) {
   return (
-    <footer className="relative mt-0 overflow-hidden bg-flag-blue text-fog">
+    <footer className="relative mt-0 bg-flag-blue text-fog">
       <div className="usa-rule" />
-      <div className="absolute inset-0 opacity-25">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-25">
         <Image
           src={images.familyWalk.src}
           alt=""
@@ -37,7 +37,7 @@ export function SiteFooter({
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[1.5fr_1fr_1fr] md:px-8 md:py-20">
         <div>
-          <p className="font-display text-3xl text-bone">{siteName}</p>
+          <p className="font-display text-3xl leading-snug text-bone">{siteName}</p>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-aluminum">{blurb}</p>
           <Link href="/donate" className="btn-copper donate-pulse mt-8 inline-flex">
             Donate to save another family today

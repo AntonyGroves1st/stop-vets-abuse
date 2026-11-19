@@ -37,7 +37,7 @@ export function SiteHeader({ siteName }: { siteName: string }) {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-8">
         <Link href="/" className="group min-w-0">
-          <span className="block font-display text-[1.35rem] leading-tight font-semibold tracking-tight text-flag-blue md:text-[1.65rem]">
+          <span className="block font-display text-[1.35rem] leading-snug font-semibold tracking-tight text-flag-blue md:text-[1.65rem]">
             {siteName}
           </span>
           <span className="mt-0.5 block font-condensed text-[0.68rem] tracking-[0.22em] text-aluminum uppercase">
