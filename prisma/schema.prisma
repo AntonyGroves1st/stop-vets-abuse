@@ -1,0 +1,123 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String?
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Story {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  excerpt     String
+  body        String
+  status      String    @default("draft")
+  branch      String
+  coverUrl    String?
+  featured    Boolean   @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Page {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  sections  String
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+}
+
+model Media {
+  id        String   @id @default(cuid())
+  url       String
+  alt       String   @default("")
+  filename  String
+  createdAt DateTime @default(now())
+}
+
+model Donation {
+  id         String   @id @default(cuid())
+  provider   String
+  amount     Int
+  currency   String   @default("usd")
+  status     String
+  email      String?
+  frequency  String   @default("one_time")
+  externalId String?
+  meta       String?
+  familyId   String?
+  family     SponsoredFamily? @relation(fields: [familyId], references: [id])
+  createdAt  DateTime @default(now())
+}
+
+model SponsoredFamily {
+  id           String             @id @default(cuid())
+  name         String
+  slug         String             @unique
+  branch       String
+  location     String
+  headline     String
+  story        String
+  imageUrl     String
+  status       String             @default("open")
+  goalCents    Int                @default(500000)
+  raisedCents  Int                @default(0)
+  featured     Boolean            @default(true)
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+  diary        FamilyDiaryEntry[]
+  followers    FamilyFollower[]
+  donations    Donation[]
+}
+
+model FamilyDiaryEntry {
+  id        String          @id @default(cuid())
+  familyId  String
+  family    SponsoredFamily @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  title     String
+  body      String
+  monthLabel String
+  kind      String          @default("update")
+  published Boolean         @default(true)
+  createdAt DateTime        @default(now())
+}
+
+model FamilyFollower {
+  id        String          @id @default(cuid())
+  familyId  String
+  family    SponsoredFamily @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  name      String
+  email     String
+  createdAt DateTime        @default(now())
+
+  @@unique([familyId, email])
+}
+
+model SiteSetting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
