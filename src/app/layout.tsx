@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Fraunces, Source_Sans_3 } from "next/font/google";
+import { Barlow_Condensed, Newsreader, Source_Sans_3 } from "next/font/google";
 import { ChromeGate } from "@/components/ChromeGate";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { getSettings } from "@/lib/settings";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-newsreader",
   display: "swap",
 });
 
@@ -48,7 +48,7 @@ export default async function RootLayout({
   const settings = await getSettings();
 
   return (
-    <html lang="en" className={`${fraunces.variable} ${source.variable} ${barlow.variable}`}>
+    <html lang="en" className={`${newsreader.variable} ${source.variable} ${barlow.variable}`}>
       <body className="min-h-screen font-sans texture-linen">
         <ScrollProgress />
         <ChromeGate

@@ -51,9 +51,9 @@ export function SiteHeader({ siteName }: { siteName: string }) {
               key={link.href}
               href={link.href}
               className={cn(
-                "relative px-3 py-2 text-sm tracking-wide transition-colors",
+                "relative inline-flex h-10 items-center px-3 text-sm tracking-wide transition-colors",
                 pathname.startsWith(link.href)
-                  ? "text-flag-blue after:absolute after:right-3 after:bottom-0 after:left-3 after:h-[2px] after:bg-flag-red"
+                  ? "text-flag-blue after:absolute after:right-3 after:bottom-1 after:left-3 after:h-[2px] after:bg-flag-red"
                   : "text-slate hover:text-flag-blue",
               )}
             >
@@ -92,7 +92,8 @@ export function SiteHeader({ siteName }: { siteName: string }) {
         </button>
       </div>
 
-      <div className="usa-rule" />
+      {/* Single continuous accent — tricolor rule was reading as a broken/offset banner */}
+      <div className="h-[3px] w-full bg-flag-red" />
 
       {open && (
         <div className="border-t border-flag-blue/10 bg-white px-5 py-5 shadow-[var(--shadow-lift)] lg:hidden">

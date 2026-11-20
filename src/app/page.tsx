@@ -62,9 +62,9 @@ export default async function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-ink/50" />
-        <div className="pointer-events-none absolute inset-6 usa-border-soft md:inset-10" />
+        <div className="pointer-events-none absolute inset-4 border border-white/25 md:inset-8" />
 
-        <div className="relative z-[2] mx-auto flex min-h-[94vh] max-w-7xl flex-col justify-end px-5 pb-14 pt-28 md:px-8 md:pb-20 lg:justify-center">
+        <div className="relative z-[2] mx-auto flex min-h-[94vh] max-w-7xl flex-col justify-end px-8 pb-14 pt-32 md:px-14 md:pb-20 lg:justify-center">
           <div className="reveal max-w-xl">
             <div className="inline-flex w-fit items-center gap-3 border border-white/15 bg-ink/40 px-3 py-1.5 backdrop-blur-md">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-copper" />

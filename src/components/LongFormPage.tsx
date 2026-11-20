@@ -63,11 +63,11 @@ export function LongFormPage({ doc }: { doc: LongFormDoc }) {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/25" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/50" />
-        <div className="pointer-events-none absolute inset-5 usa-border-soft md:inset-10" />
+        <div className="pointer-events-none absolute inset-4 border border-white/25 md:inset-8" />
 
-        <div className="relative z-[2] mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-end px-5 pb-14 pt-28 md:px-8 md:pb-20">
+        <div className="relative z-[2] mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-end px-8 pb-14 pt-32 md:px-14 md:pb-20">
           <p className="reveal eyebrow text-brass-soft">{doc.eyebrow}</p>
-          <h1 className="reveal reveal-delay-1 mt-4 max-w-4xl font-display text-4xl leading-[1.02] font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="reveal reveal-delay-1 mt-4 max-w-4xl font-display text-4xl leading-[1.15] font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             {doc.title}
           </h1>
           <p className="reveal reveal-delay-2 mt-6 max-w-2xl text-lg text-fog md:text-xl">
@@ -156,8 +156,8 @@ export function LongFormPage({ doc }: { doc: LongFormDoc }) {
       {/* ZONE 4 — Pull quote band */}
       <section className="relative overflow-hidden bg-ink text-bone">
         <div className="absolute inset-0 ink-wash opacity-90" />
-        <div className="pointer-events-none absolute inset-6 usa-border-soft md:inset-12" />
-        <div className="relative mx-auto max-w-5xl px-5 py-20 text-center md:px-8 md:py-28">
+        <div className="pointer-events-none absolute inset-4 border border-white/20 md:inset-10" />
+        <div className="relative mx-auto max-w-5xl px-8 py-20 text-center md:px-14 md:py-28">
           <p className="font-condensed text-[0.7rem] tracking-[0.3em] text-brass-soft uppercase">
             From the desk
           </p>

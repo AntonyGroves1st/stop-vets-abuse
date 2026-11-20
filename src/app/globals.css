@@ -23,7 +23,7 @@
   --color-flag-blue: #002868;
   --color-flag-white: #ffffff;
 
-  --font-display: var(--font-fraunces), "Georgia", serif;
+  --font-display: var(--font-newsreader), "Georgia", "Times New Roman", serif;
   --font-sans: var(--font-source), "Helvetica Neue", sans-serif;
   --font-condensed: var(--font-barlow), "Arial Narrow", sans-serif;
 

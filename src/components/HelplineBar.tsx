@@ -2,8 +2,7 @@ import Link from "next/link";
 
 export function HelplineBar({ email }: { email: string }) {
   return (
-    <div className="relative z-50 bg-flag-blue text-fog">
-      <div className="usa-rule-thin" />
+    <div className="relative z-50 border-b border-white/10 bg-flag-blue text-fog">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-5 py-2.5 text-[0.78rem] md:px-8">
         <p className="font-condensed tracking-[0.14em] uppercase">
           <span className="text-white">Tip line</span>
@@ -29,7 +28,6 @@ export function HelplineBar({ email }: { email: string }) {
           </Link>
         </div>
       </div>
-      <div className="usa-rule-thin" />
     </div>
   );
 }

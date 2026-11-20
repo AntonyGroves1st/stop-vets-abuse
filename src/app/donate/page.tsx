@@ -37,7 +37,7 @@ export default async function DonatePage({
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
-        <div className="pointer-events-none absolute inset-6 usa-border-soft md:inset-10" />
+        <div className="pointer-events-none absolute inset-4 border border-white/25 md:inset-8" />
         <div className="relative z-[2] mx-auto flex min-h-[48vh] max-w-6xl flex-col justify-end px-5 pb-12 pt-28 md:px-8">
           <p className="eyebrow text-brass-soft">
             {family ? `Sponsoring ${family.name}` : "Ways to donate"}
