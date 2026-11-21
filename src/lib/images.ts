@@ -4,6 +4,10 @@ export const images = {
     src: "/images/brand-banner.png",
     alt: "Stop Veterans Abuse — Honor, Support, Protect",
   },
+  brandBannerHeader: {
+    src: "/images/brand-banner-header.png",
+    alt: "Stop Veterans Abuse — Honor, Support, Protect",
+  },
   brandBannerHero: {
     src: "/images/brand-banner-hero.png",
     alt: "Stop Veterans Abuse — Honor, Support, Protect",
