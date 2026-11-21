@@ -1,5 +1,9 @@
 /** Curated local photography — balanced military family representation. */
 export const images = {
+  brandBanner: {
+    src: "/images/brand-banner.png",
+    alt: "Stop Veterans Abuse — Honour, Support, Protect",
+  },
   hero: {
     src: "/images/soldier-mother.jpg",
     alt: "Service member in uniform surprising family at the front door",

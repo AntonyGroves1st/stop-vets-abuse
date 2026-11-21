@@ -67,9 +67,16 @@ export function SiteFooter({
           <div className="grid gap-10 lg:grid-cols-[1.4fr_0.9fr_0.9fr] lg:gap-14">
             <div>
               <p className="eyebrow text-brass-soft">Independent desk</p>
-              <p className="mt-3 font-display text-3xl leading-snug text-bone md:text-4xl">
-                {siteName}
-              </p>
+              <div className="mt-4 inline-block bg-black p-2">
+                <Image
+                  src={images.brandBanner.src}
+                  alt={images.brandBanner.alt}
+                  width={520}
+                  height={150}
+                  className="h-auto w-full max-w-md object-contain"
+                />
+              </div>
+              <p className="sr-only">{siteName}</p>
               <p className="mt-4 max-w-md text-base leading-relaxed text-fog">{blurb}</p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/donate" className="btn-copper donate-pulse !bg-flag-red">

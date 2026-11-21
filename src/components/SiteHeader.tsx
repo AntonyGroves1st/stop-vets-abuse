@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { images } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -36,13 +38,19 @@ export function SiteHeader({ siteName }: { siteName: string }) {
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-8">
-        <Link href="/" className="group min-w-0">
-          <span className="block font-display text-[1.35rem] leading-snug font-semibold tracking-tight text-flag-blue md:text-[1.65rem]">
-            {siteName}
-          </span>
-          <span className="mt-0.5 block font-condensed text-[0.68rem] tracking-[0.22em] text-aluminum uppercase">
-            Families first · Troops always · Independent desk
-          </span>
+        <Link
+          href="/"
+          className="group min-w-0 shrink-0 bg-ink px-2 py-1.5 shadow-[var(--shadow-edge)] transition hover:opacity-95"
+          aria-label={siteName}
+        >
+          <Image
+            src={images.brandBanner.src}
+            alt={images.brandBanner.alt}
+            width={420}
+            height={120}
+            priority
+            className="h-10 w-auto max-w-[min(52vw,280px)] object-contain object-left md:h-12 md:max-w-[340px]"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">

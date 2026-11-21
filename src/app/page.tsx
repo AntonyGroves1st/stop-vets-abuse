@@ -72,9 +72,17 @@ export default async function HomePage() {
                 For USA troops · Veterans · Every military family
               </span>
             </div>
-            <h1 className="mt-5 font-display text-[2.35rem] leading-[1.12] font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-[3.6rem]">
-              {settings.siteName}
-            </h1>
+            <div className="mt-6 inline-block max-w-xl bg-black/80 p-3 shadow-[var(--shadow-deep)] backdrop-blur-sm md:p-4">
+              <Image
+                src={images.brandBanner.src}
+                alt={images.brandBanner.alt}
+                width={720}
+                height={200}
+                priority
+                className="h-auto w-full object-contain"
+              />
+            </div>
+            <h1 className="sr-only">{settings.siteName}</h1>
             <p className="mt-4 text-lg leading-relaxed text-fog md:text-xl">
               {home.heroHeadline}
             </p>
