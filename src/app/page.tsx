@@ -5,6 +5,7 @@ import { FacesHelped } from "@/components/FacesHelped";
 import { FamilyStrip } from "@/components/FamilyStrip";
 import { FastDonate } from "@/components/FastDonate";
 import { HelpGrid } from "@/components/HelpGrid";
+import { HeroBrand } from "@/components/HeroBrand";
 import { SponsorFamilies } from "@/components/SponsorFamilies";
 import { StatCounters } from "@/components/StatCounters";
 import { StoryCard } from "@/components/StoryCard";
@@ -57,21 +58,21 @@ export default async function HomePage() {
           alt={images.hero.alt}
           fill
           priority
-          className="reveal-scale object-cover object-[68%_30%] opacity-80 md:object-[78%_28%]"
+          className="reveal-scale object-cover object-[70%_25%] md:object-[82%_22%]"
           sizes="100vw"
         />
-        {/* Soft flag atmosphere on the left (matches example layout) */}
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 w-[55%] opacity-35 mix-blend-soft-light"
+          className="pointer-events-none absolute inset-y-0 left-0 w-[50%] opacity-40"
           style={{
             backgroundImage: "url(/images/flag-soft.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "left center",
+            maskImage: "linear-gradient(to right, black 40%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to right, black 40%, transparent 100%)",
           }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_15%_40%,rgba(0,70,180,0.5),transparent_55%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-ink/88 to-transparent md:via-ink/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent md:via-black/55 md:to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-black/35" />
 
         <div className="relative z-[2] mx-auto flex min-h-[94vh] max-w-7xl flex-col justify-end px-6 pb-12 pt-28 md:px-12 md:pb-16 lg:justify-center lg:pb-20">
           <div className="reveal max-w-2xl">
@@ -84,15 +85,7 @@ export default async function HomePage() {
               </span>
             </div>
 
-            <Image
-              src={images.brandBannerHero.src}
-              alt={images.brandBannerHero.alt}
-              width={920}
-              height={314}
-              priority
-              className="mt-5 h-auto w-full max-w-[40rem] object-contain"
-            />
-            <h1 className="sr-only">{settings.siteName}</h1>
+            <HeroBrand siteName={settings.siteName} />
 
             <p className="mt-5 max-w-lg font-display text-xl italic leading-snug text-bone md:text-2xl">
               When the system fails a service member, a family{" "}
