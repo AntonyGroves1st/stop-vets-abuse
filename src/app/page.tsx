@@ -58,21 +58,11 @@ export default async function HomePage() {
           alt={images.hero.alt}
           fill
           priority
-          className="reveal-scale object-cover object-[70%_25%] md:object-[82%_22%]"
+          className="reveal-scale object-cover object-[62%_18%] md:object-[68%_12%]"
           sizes="100vw"
         />
-        <div
-          className="pointer-events-none absolute inset-y-0 left-0 w-[50%] opacity-40"
-          style={{
-            backgroundImage: "url(/images/flag-soft.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "left center",
-            maskImage: "linear-gradient(to right, black 40%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to right, black 40%, transparent 100%)",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent md:via-black/55 md:to-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent md:from-black/85 md:via-black/35 md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-black/25" />
 
         <div className="relative z-[2] mx-auto flex min-h-[94vh] max-w-7xl flex-col justify-end px-6 pb-12 pt-28 md:px-12 md:pb-16 lg:justify-center lg:pb-20">
           <div className="reveal max-w-2xl">
