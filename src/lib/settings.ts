@@ -37,18 +37,23 @@ export const defaultSettings: SiteSettings = {
 };
 
 export async function getSettings(): Promise<SiteSettings> {
-  const rows = await prisma.siteSetting.findMany();
-  const map = Object.fromEntries(rows.map((r) => [r.key, r.value]));
+  try {
+    const rows = await prisma.siteSetting.findMany();
+    const map = Object.fromEntries(rows.map((r) => [r.key, r.value]));
 
-  return {
-    siteName: map.siteName ?? defaultSettings.siteName,
-    tagline: map.tagline ?? defaultSettings.tagline,
-    contactEmail: map.contactEmail ?? defaultSettings.contactEmail,
-    footerBlurb: map.footerBlurb ?? defaultSettings.footerBlurb,
-    socialTwitter: map.socialTwitter ?? defaultSettings.socialTwitter,
-    socialFacebook: map.socialFacebook ?? defaultSettings.socialFacebook,
-    donate: parseJson(map.donate ?? "", defaultSettings.donate),
-  };
+    return {
+      siteName: map.siteName ?? defaultSettings.siteName,
+      tagline: map.tagline ?? defaultSettings.tagline,
+      contactEmail: map.contactEmail ?? defaultSettings.contactEmail,
+      footerBlurb: map.footerBlurb ?? defaultSettings.footerBlurb,
+      socialTwitter: map.socialTwitter ?? defaultSettings.socialTwitter,
+      socialFacebook: map.socialFacebook ?? defaultSettings.socialFacebook,
+      donate: parseJson(map.donate ?? "", defaultSettings.donate),
+    };
+  } catch {
+    // Build / offline: fall back so layout and static shells still render.
+    return defaultSettings;
+  }
 }
 
 export async function setSetting(key: string, value: string) {
