@@ -25,23 +25,23 @@ const faces = [
     role: "Army household",
     quote:
       "Retaliation looked like schedule changes and closed doors. Seeing the pattern published broke the isolation.",
-    image: images.heroAlt,
+    image: images.familyCouch,
   },
 ];
 
 export function FacesHelped() {
   return (
-    <section className="relative overflow-hidden ink-wash py-20 text-bone md:py-28">
-      <div className="pointer-events-none absolute inset-0 opacity-30 texture-linen" />
+    <section className="relative overflow-hidden bg-paper py-20 text-ink md:py-28">
+      <div className="pointer-events-none absolute inset-0 opacity-40 texture-linen" />
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="eyebrow text-brass-soft">Who we stand with</p>
-            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight md:text-5xl">
+            <p className="eyebrow text-flag-red">Who we stand with</p>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight text-flag-blue md:text-5xl">
               Faces behind the FOIA numbers
             </h2>
           </div>
-          <p className="max-w-sm text-sm text-fog">
+          <p className="max-w-sm text-sm text-slate">
             Composite portraits drawn from recurring patterns in our reporting — the people donations
             keep us able to defend in print.
           </p>
@@ -55,7 +55,7 @@ export function FacesHelped() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="edge-frame-dark group overflow-hidden bg-ink-soft/80"
+              className="group overflow-hidden border border-flag-blue/15 bg-white shadow-[var(--shadow-lift)]"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
@@ -65,31 +65,31 @@ export function FacesHelped() {
                   className="object-cover transition duration-700 group-hover:scale-[1.05]"
                   sizes="(max-width: 1024px) 100vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6 text-bone">
                   <p className="font-display text-3xl">{face.name}</p>
-                  <p className="mt-1 font-condensed text-xs tracking-[0.2em] text-brass-soft uppercase">
+                  <p className="mt-1 font-condensed text-xs tracking-[0.2em] text-fog uppercase">
                     {face.role}
                   </p>
                 </div>
               </div>
-              <blockquote className="border-t border-white/10 p-6 text-[0.95rem] leading-relaxed text-fog">
+              <blockquote className="border-t border-flag-blue/10 bg-white p-6 text-[0.95rem] leading-relaxed text-slate">
                 “{face.quote}”
               </blockquote>
             </motion.article>
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-6 border border-white/10 bg-white/5 p-6 backdrop-blur-md md:flex-row md:items-center md:p-8">
+        <div className="mt-12 flex flex-col items-start justify-between gap-6 border border-flag-blue/15 bg-white p-6 shadow-[var(--shadow-lift)] md:flex-row md:items-center md:p-8">
           <div>
-            <p className="font-display text-2xl md:text-3xl">
+            <p className="font-display text-2xl text-flag-blue md:text-3xl">
               Help more people like Kate, Erin &amp; Maria
             </p>
-            <p className="mt-2 max-w-xl text-sm text-fog">
+            <p className="mt-2 max-w-xl text-sm text-slate">
               Every gift funds the next investigation that command climate surveys will never write.
             </p>
           </div>
-          <Link href="/donate" className="btn-copper donate-pulse shrink-0">
+          <Link href="/donate" className="btn-copper donate-pulse shrink-0 !bg-flag-red">
             Donate to save another family today
           </Link>
         </div>
