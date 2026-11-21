@@ -57,12 +57,21 @@ export default async function HomePage() {
           alt={images.hero.alt}
           fill
           priority
-          className="reveal-scale object-cover object-[72%_22%] opacity-75 md:object-[80%_20%]"
+          className="reveal-scale object-cover object-[68%_30%] opacity-80 md:object-[78%_28%]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_18%_35%,rgba(0,70,180,0.45),transparent_50%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-ink/92 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-black/50" />
+        {/* Soft flag atmosphere on the left (matches example layout) */}
+        <div
+          className="pointer-events-none absolute inset-y-0 left-0 w-[55%] opacity-35 mix-blend-soft-light"
+          style={{
+            backgroundImage: "url(/images/flag-soft.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "left center",
+          }}
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_15%_40%,rgba(0,70,180,0.5),transparent_55%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-ink/88 to-transparent md:via-ink/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-black/45" />
 
         <div className="relative z-[2] mx-auto flex min-h-[94vh] max-w-7xl flex-col justify-end px-6 pb-12 pt-28 md:px-12 md:pb-16 lg:justify-center lg:pb-20">
           <div className="reveal max-w-2xl">

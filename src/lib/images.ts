@@ -9,8 +9,8 @@ export const images = {
     alt: "Stop Veterans Abuse — Honour, Support, Protect",
   },
   hero: {
-    src: "/images/soldier-mother.jpg",
-    alt: "Service member in uniform surprising family at the front door",
+    src: "/images/hero-military-homecoming.jpg",
+    alt: "Service member in uniform embracing family at homecoming",
   },
   heroAlt: {
     src: "/images/hero-family-reunion.jpg",
