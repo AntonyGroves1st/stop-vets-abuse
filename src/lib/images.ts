@@ -4,6 +4,10 @@ export const images = {
     src: "/images/brand-banner.png",
     alt: "Stop Veterans Abuse — Honour, Support, Protect",
   },
+  brandBannerHero: {
+    src: "/images/brand-banner-hero.png",
+    alt: "Stop Veterans Abuse — Honour, Support, Protect",
+  },
   hero: {
     src: "/images/soldier-mother.jpg",
     alt: "Service member in uniform surprising family at the front door",
@@ -57,7 +61,7 @@ export const images = {
     alt: "Parent and child together",
   },
   homecoming: {
-    src: "/images/homecoming-embrace.jpg",
-    alt: "Homecoming moment",
+    src: "/images/hero-family-reunion.jpg",
+    alt: "Service member holding a child while embraced by their partner",
   },
 } as const;

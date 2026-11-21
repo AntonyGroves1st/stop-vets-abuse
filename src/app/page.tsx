@@ -53,20 +53,20 @@ export default async function HomePage() {
       {/* HERO */}
       <section className="relative min-h-[94vh] overflow-hidden bg-ink text-bone">
         <Image
-          src={images.homecoming.src}
-          alt={images.homecoming.alt}
+          src={images.hero.src}
+          alt={images.hero.alt}
           fill
           priority
-          className="reveal-scale object-cover object-[78%_20%] opacity-70 md:object-[85%_18%]"
+          className="reveal-scale object-cover object-[72%_22%] opacity-75 md:object-[80%_20%]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_40%,rgba(0,40,104,0.55),transparent_55%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/40" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_18%_35%,rgba(0,70,180,0.45),transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-ink/92 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-black/50" />
 
         <div className="relative z-[2] mx-auto flex min-h-[94vh] max-w-7xl flex-col justify-end px-6 pb-12 pt-28 md:px-12 md:pb-16 lg:justify-center lg:pb-20">
-          <div className="reveal max-w-xl">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-flag-blue/70 px-3.5 py-1.5 shadow-[0_0_24px_-6px_rgba(0,40,104,0.8)] backdrop-blur-md">
+          <div className="reveal max-w-2xl">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-flag-blue/75 px-3.5 py-1.5 shadow-[0_0_28px_-4px_rgba(61,124,255,0.7)] backdrop-blur-md">
               <span className="text-[0.65rem] text-flag-red" aria-hidden>
                 ★
               </span>
@@ -75,14 +75,17 @@ export default async function HomePage() {
               </span>
             </div>
 
-            <Image
-              src={images.brandBanner.src}
-              alt={images.brandBanner.alt}
-              width={720}
-              height={200}
-              priority
-              className="mt-5 h-auto w-full max-w-[34rem] object-contain drop-shadow-[0_18px_40px_rgba(0,0,0,0.55)]"
-            />
+            {/* High-contrast hero lockup (white wordmark) — header keeps original PNG */}
+            <div className="mt-5 inline-block max-w-full rounded-sm shadow-[0_0_0_1px_rgba(61,124,255,0.45),0_0_48px_-8px_rgba(61,124,255,0.65),0_24px_48px_-16px_rgba(0,0,0,0.8)]">
+              <Image
+                src={images.brandBannerHero.src}
+                alt={images.brandBannerHero.alt}
+                width={920}
+                height={314}
+                priority
+                className="h-auto w-full max-w-[40rem] object-contain"
+              />
+            </div>
             <h1 className="sr-only">{settings.siteName}</h1>
 
             <p className="mt-5 max-w-lg font-display text-xl italic leading-snug text-bone md:text-2xl">
@@ -106,7 +109,7 @@ export default async function HomePage() {
               </Link>
               <Link
                 href="/sponsor"
-                className="inline-flex items-center gap-2 border border-white/25 bg-ink/50 px-5 py-3 text-sm font-semibold text-bone backdrop-blur-sm transition hover:border-white/50 hover:bg-white/10"
+                className="inline-flex items-center gap-2 border border-[#3d7cff]/60 bg-ink/55 px-5 py-3 text-sm font-semibold text-bone shadow-[0_0_24px_-8px_rgba(61,124,255,0.55)] backdrop-blur-sm transition hover:border-[#3d7cff] hover:bg-white/10"
               >
                 Sponsor a family
               </Link>
