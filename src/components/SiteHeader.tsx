@@ -44,12 +44,13 @@ export function SiteHeader({ siteName }: { siteName: string }) {
           aria-label={siteName}
         >
           <Image
-            src={images.brandBannerHeader.src}
+            src={`${images.brandBannerHeader.src}?v=3`}
             alt={images.brandBannerHeader.alt}
             width={1024}
-            height={280}
+            height={348}
             priority
-            className="h-12 w-auto max-w-[min(62vw,360px)] object-contain object-left md:h-[3.75rem] md:max-w-[440px]"
+            unoptimized
+            className="h-14 w-auto max-w-[min(70vw,420px)] object-contain object-left md:h-16 md:max-w-[520px]"
           />
         </Link>
 
