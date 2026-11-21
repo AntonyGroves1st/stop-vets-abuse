@@ -12,6 +12,7 @@ const links = [
   { href: "/admin/media", label: "Media" },
   { href: "/admin/families", label: "Families" },
   { href: "/admin/donations", label: "Donations" },
+  { href: "/admin/funding", label: "Funding leads" },
   { href: "/admin/inbox", label: "Inbox" },
   { href: "/admin/settings", label: "Settings" },
 ];

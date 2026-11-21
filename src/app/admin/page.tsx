@@ -26,6 +26,7 @@ export default async function AdminDashboard() {
       href: "/admin/donations",
     },
     { label: "Unread tips", value: String(unreadTips), href: "/admin/inbox" },
+    { label: "Funding leads", value: "Gov · partners", href: "/admin/funding" },
   ];
 
   return (
@@ -33,7 +34,7 @@ export default async function AdminDashboard() {
       <h1 className="font-display text-3xl text-ink">Dashboard</h1>
       <p className="mt-2 text-slate">Editorial desk overview</p>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
         {cards.map((card) => (
           <Link
             key={card.label}
