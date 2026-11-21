@@ -66,23 +66,23 @@ export default async function HomePage() {
 
         <div className="relative z-[2] mx-auto flex min-h-[94vh] max-w-7xl flex-col justify-end px-6 pb-12 pt-28 md:px-12 md:pb-16 lg:justify-center lg:pb-20">
           <div className="reveal max-w-2xl">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-flag-blue/75 px-3.5 py-1.5 shadow-[0_0_28px_-4px_rgba(61,124,255,0.7)] backdrop-blur-md">
-              <span className="text-[0.65rem] text-flag-red" aria-hidden>
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#00d4ff]/70 bg-[#000814]/80 px-3.5 py-1.5 shadow-[0_0_0_1px_rgba(0,212,255,0.35),0_0_28px_2px_rgba(0,212,255,0.45)] backdrop-blur-md">
+              <span className="text-[0.7rem] text-[#e60000]" aria-hidden>
                 ★
               </span>
-              <span className="eyebrow text-[0.65rem] tracking-[0.22em] text-bone">
+              <span className="font-condensed text-[0.65rem] font-semibold tracking-[0.24em] text-white uppercase">
                 For USA troops · Veterans · Every military family
               </span>
             </div>
 
             <HeroBrand siteName={settings.siteName} />
 
-            <p className="mt-5 max-w-lg font-display text-xl italic leading-snug text-bone md:text-2xl">
+            <p className="mt-5 max-w-lg font-display text-xl italic leading-snug text-white md:text-2xl">
               When the system fails a service member, a family{" "}
               <span className="relative inline-block">
                 pays the price
                 <span
-                  className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-gradient-to-r from-flag-red via-flag-red to-transparent"
+                  className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-gradient-to-r from-[#e60000] via-[#e60000] to-transparent"
                   aria-hidden
                 />
               </span>
@@ -92,14 +92,20 @@ export default async function HomePage() {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="/investigations"
-                className="inline-flex items-center gap-2 bg-flag-red px-5 py-3 text-sm font-semibold text-bone shadow-[0_12px_32px_-10px_rgba(191,10,48,0.75)] transition hover:bg-copper-hot"
+                className="inline-flex items-center gap-2 rounded-md border-2 border-[#00d4ff] bg-gradient-to-b from-[#ff2a2a] to-[#b80000] px-5 py-3 text-sm font-bold text-white shadow-[0_0_20px_2px_rgba(0,212,255,0.35),0_10px_28px_-10px_rgba(230,0,0,0.8)] transition hover:brightness-110"
               >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3zm-1 13l6-6-1.4-1.4L11 12.2 8.4 9.6 7 11l4 4z" />
+                </svg>
                 Read investigations
               </Link>
               <Link
                 href="/sponsor"
-                className="inline-flex items-center gap-2 border border-[#3d7cff]/60 bg-ink/55 px-5 py-3 text-sm font-semibold text-bone shadow-[0_0_24px_-8px_rgba(61,124,255,0.55)] backdrop-blur-sm transition hover:border-[#3d7cff] hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-md border-2 border-[#00d4ff] bg-[#000814]/75 px-5 py-3 text-sm font-bold text-white shadow-[0_0_20px_2px_rgba(0,212,255,0.4)] backdrop-blur-sm transition hover:bg-[#001a33]"
               >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M16 11a3 3 0 100-6 3 3 0 000 6zM8 11a3 3 0 100-6 3 3 0 000 6zm0 2c-2.7 0-8 1.3-8 4v2h10v-2c0-1.2.5-2.3 1.4-3.2C10.4 13.3 9.2 13 8 13zm8 0c-.4 0-.8 0-1.2.1 1.3.8 2.2 2 2.2 3.4V19h7v-2c0-2.7-5.3-4-8-4z" />
+                </svg>
                 Sponsor a family
               </Link>
             </div>
