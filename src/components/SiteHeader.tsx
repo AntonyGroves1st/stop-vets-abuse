@@ -49,7 +49,7 @@ export function SiteHeader({ siteName }: { siteName: string }) {
             width={420}
             height={120}
             priority
-            className="h-10 w-auto max-w-[min(52vw,280px)] object-contain object-left md:h-12 md:max-w-[340px]"
+            className="h-11 w-auto max-w-[min(58vw,320px)] object-contain object-left md:h-14 md:max-w-[400px]"
           />
         </Link>
 
