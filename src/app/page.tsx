@@ -75,17 +75,14 @@ export default async function HomePage() {
               </span>
             </div>
 
-            {/* High-contrast hero lockup (white wordmark) — header keeps original PNG */}
-            <div className="mt-5 inline-block max-w-full rounded-sm shadow-[0_0_0_1px_rgba(61,124,255,0.45),0_0_48px_-8px_rgba(61,124,255,0.65),0_24px_48px_-16px_rgba(0,0,0,0.8)]">
-              <Image
-                src={images.brandBannerHero.src}
-                alt={images.brandBannerHero.alt}
-                width={920}
-                height={314}
-                priority
-                className="h-auto w-full max-w-[40rem] object-contain"
-              />
-            </div>
+            <Image
+              src={images.brandBannerHero.src}
+              alt={images.brandBannerHero.alt}
+              width={920}
+              height={314}
+              priority
+              className="mt-5 h-auto w-full max-w-[40rem] object-contain"
+            />
             <h1 className="sr-only">{settings.siteName}</h1>
 
             <p className="mt-5 max-w-lg font-display text-xl italic leading-snug text-bone md:text-2xl">
