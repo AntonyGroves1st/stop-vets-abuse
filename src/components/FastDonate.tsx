@@ -51,13 +51,18 @@ export function FastDonate({ amounts, stripeReady, monthlyEnabled = true }: Prop
   }
 
   return (
-    <div className="w-full max-w-md border border-white/20 bg-ink/55 p-5 shadow-[var(--shadow-deep)] backdrop-blur-md md:p-6">
+    <div className="w-full max-w-md border border-[#3d7cff]/55 bg-ink/70 p-5 shadow-[0_0_0_1px_rgba(61,124,255,0.25),0_0_40px_-12px_rgba(61,124,255,0.55),0_24px_48px_-20px_rgba(0,0,0,0.65)] backdrop-blur-md md:p-6">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="eyebrow text-brass-soft">Fast donate</p>
+          <p className="eyebrow text-flag-red">
+            <span className="mr-1 text-flag-red" aria-hidden>
+              ★
+            </span>
+            Fast donate
+          </p>
           <p className="mt-1 font-display text-2xl text-bone">Save another family today</p>
         </div>
-        <span className="shrink-0 border border-flag-red/50 bg-flag-red/20 px-2 py-1 font-condensed text-[0.65rem] tracking-[0.16em] text-bone uppercase">
+        <span className="inline-flex shrink-0 items-center gap-1.5 border border-flag-red/50 bg-flag-red/20 px-2 py-1 font-condensed text-[0.65rem] tracking-[0.16em] text-bone uppercase">
           Secure
         </span>
       </div>
@@ -74,9 +79,9 @@ export function FastDonate({ amounts, stripeReady, monthlyEnabled = true }: Prop
               key={value}
               type="button"
               onClick={() => setFrequency(value)}
-              className={`px-3 py-2.5 text-xs font-semibold tracking-wide transition ${
+              className={`inline-flex items-center justify-center gap-2 px-3 py-2.5 text-xs font-semibold tracking-wide transition ${
                 frequency === value
-                  ? "bg-flag-red text-bone"
+                  ? "bg-flag-red text-bone shadow-[0_8px_24px_-8px_rgba(191,10,48,0.8)]"
                   : "border border-white/20 bg-white/5 text-fog hover:bg-white/10"
               }`}
             >
@@ -87,23 +92,26 @@ export function FastDonate({ amounts, stripeReady, monthlyEnabled = true }: Prop
       )}
 
       <div className="mt-4 grid grid-cols-4 gap-2">
-        {presets.map((cents) => (
-          <button
-            key={cents}
-            type="button"
-            onClick={() => {
-              setAmount(cents);
-              setCustom("");
-            }}
-            className={`px-1 py-3 text-sm font-semibold transition ${
-              !custom && amount === cents
-                ? "bg-bone text-flag-blue"
-                : "border border-white/20 bg-white/5 text-bone hover:border-white/40"
-            }`}
-          >
-            {formatCurrency(cents).replace(".00", "")}
-          </button>
-        ))}
+        {presets.map((cents) => {
+          const active = !custom && amount === cents;
+          return (
+            <button
+              key={cents}
+              type="button"
+              onClick={() => {
+                setAmount(cents);
+                setCustom("");
+              }}
+              className={`px-1 py-3 text-sm font-semibold transition ${
+                active
+                  ? "border border-[#3d7cff] bg-ink text-bone shadow-[0_0_0_1px_rgba(61,124,255,0.7),0_0_22px_-4px_rgba(61,124,255,0.9)]"
+                  : "border border-white/20 bg-white/5 text-bone hover:border-white/40"
+              }`}
+            >
+              {formatCurrency(cents).replace(".00", "")}
+            </button>
+          );
+        })}
       </div>
 
       <label className="mt-3 block">
@@ -116,7 +124,7 @@ export function FastDonate({ amounts, stripeReady, monthlyEnabled = true }: Prop
             step={1}
             value={custom}
             onChange={(e) => setCustom(e.target.value)}
-            placeholder="Other"
+            placeholder="Other amount"
             className="w-full bg-transparent px-2 py-3 text-sm text-bone outline-none placeholder:text-aluminum"
           />
         </div>

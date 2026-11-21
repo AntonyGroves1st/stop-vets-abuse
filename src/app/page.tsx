@@ -51,46 +51,62 @@ export default async function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-[94vh] overflow-hidden bg-ink text-bone grain">
+      <section className="relative min-h-[94vh] overflow-hidden bg-ink text-bone">
         <Image
-          src={images.hero.src}
-          alt={images.hero.alt}
+          src={images.homecoming.src}
+          alt={images.homecoming.alt}
           fill
           priority
-          className="reveal-scale object-cover object-[72%_28%] opacity-60 md:object-[80%_28%]"
+          className="reveal-scale object-cover object-[78%_20%] opacity-70 md:object-[85%_18%]"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/15" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-ink/50" />
-        <div className="pointer-events-none absolute inset-4 border border-white/25 md:inset-8" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_40%,rgba(0,40,104,0.55),transparent_55%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/40" />
 
-        <div className="relative z-[2] mx-auto flex min-h-[94vh] max-w-7xl flex-col justify-end px-8 pb-14 pt-32 md:px-14 md:pb-20 lg:justify-center">
+        <div className="relative z-[2] mx-auto flex min-h-[94vh] max-w-7xl flex-col justify-end px-6 pb-12 pt-28 md:px-12 md:pb-16 lg:justify-center lg:pb-20">
           <div className="reveal max-w-xl">
-            <div className="inline-flex w-fit items-center gap-3 border border-white/15 bg-ink/40 px-3 py-1.5 backdrop-blur-md">
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-copper" />
-              <span className="eyebrow text-fog">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-flag-blue/70 px-3.5 py-1.5 shadow-[0_0_24px_-6px_rgba(0,40,104,0.8)] backdrop-blur-md">
+              <span className="text-[0.65rem] text-flag-red" aria-hidden>
+                ★
+              </span>
+              <span className="eyebrow text-[0.65rem] tracking-[0.22em] text-bone">
                 For USA troops · Veterans · Every military family
               </span>
             </div>
+
             <Image
               src={images.brandBanner.src}
               alt={images.brandBanner.alt}
               width={720}
               height={200}
               priority
-              className="mt-6 h-auto w-full max-w-xl object-contain"
+              className="mt-5 h-auto w-full max-w-[34rem] object-contain drop-shadow-[0_18px_40px_rgba(0,0,0,0.55)]"
             />
             <h1 className="sr-only">{settings.siteName}</h1>
-            <p className="mt-4 text-lg leading-relaxed text-fog md:text-xl">
-              {home.heroHeadline}
+
+            <p className="mt-5 max-w-lg font-display text-xl italic leading-snug text-bone md:text-2xl">
+              When the system fails a service member, a family{" "}
+              <span className="relative inline-block">
+                pays the price
+                <span
+                  className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-gradient-to-r from-flag-red via-flag-red to-transparent"
+                  aria-hidden
+                />
+              </span>
+              .
             </p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              <Link href="/investigations" className="btn-ghost px-5 py-2.5 text-sm">
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/investigations"
+                className="inline-flex items-center gap-2 bg-flag-red px-5 py-3 text-sm font-semibold text-bone shadow-[0_12px_32px_-10px_rgba(191,10,48,0.75)] transition hover:bg-copper-hot"
+              >
                 Read investigations
               </Link>
               <Link
                 href="/sponsor"
-                className="border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-semibold text-bone backdrop-blur-sm transition hover:bg-white/10"
+                className="inline-flex items-center gap-2 border border-white/25 bg-ink/50 px-5 py-3 text-sm font-semibold text-bone backdrop-blur-sm transition hover:border-white/50 hover:bg-white/10"
               >
                 Sponsor a family
               </Link>
