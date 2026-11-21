@@ -33,12 +33,12 @@ export const images = {
     alt: "Parents lifting their child while walking together outdoors",
   },
   elderCare: {
-    src: "/images/care-hands.jpg",
-    alt: "Older veteran with family members offering support at home",
+    src: "/images/family-ellison.jpg",
+    alt: "Older veteran with an adult child caregiver at home",
   },
   community: {
-    src: "/images/community-women.jpg",
-    alt: "Community members sharing a moment of support",
+    src: "/images/family-romero.jpg",
+    alt: "Military family together outdoors",
   },
   fatherSon: {
     src: "/images/father-son.jpg",

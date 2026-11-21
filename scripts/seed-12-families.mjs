@@ -116,7 +116,7 @@ const families = [
     headline: "Mental-health tickets that died in routine — a spouse keeping the calendar.",
     story:
       "A shore-command referral sat labeled routine while the household reorganized work, school, and sleep around unanswered calls. Sponsorship funds routing reconstruction, outside counseling bridge support, and a year of diary letters so donors see whether care actually arrived.",
-    imageUrl: "/images/couple-kiss.jpg",
+    imageUrl: "/images/family-okonkwo.jpg",
     goalCents: 550000,
     raisedCents: 241000,
     featured: true,
@@ -149,7 +149,7 @@ const families = [
     headline: "Depot whistleblowers frozen out — and a kitchen table that absorbed the hit.",
     story:
       "After flagging unsafe maintenance pressure, schedule changes and scorecard hits landed on the household. Sponsorship funds document-first retaliation mapping, legal harden, and family stability while the public pattern is proven.",
-    imageUrl: "/images/family-hart.jpg",
+    imageUrl: "/images/couple-kiss.jpg",
     goalCents: 700000,
     raisedCents: 156000,
     featured: true,
@@ -182,7 +182,7 @@ const families = [
     headline: "Cutter tempo without manning math — exhaustion that became authority abuse risk.",
     story:
       "Port-call patterns and crew diaries show a household carrying unpaid recovery between surges. Sponsorship funds records work on schedules, spouse impact interviews, and year-long follow-through so tempo is not blamed on individuals alone.",
-    imageUrl: "/images/family-walk.jpg",
+    imageUrl: "/images/family-nguyen.jpg",
     goalCents: 480000,
     raisedCents: 92000,
     featured: true,
@@ -281,7 +281,7 @@ const families = [
     headline: "A sailor's spouse documenting silence — hour by hour.",
     story:
       "Missed callbacks and rewritten appointment windows turned the Patels into unpaid case managers. Sponsorship funds timestamp reconstruction, secure tip coaching, and household relief while the routing failure becomes public.",
-    imageUrl: "/images/servicewomen.jpg",
+    imageUrl: "/images/family-patel.jpg",
     goalCents: 520000,
     raisedCents: 118000,
     featured: false,
@@ -314,7 +314,7 @@ const families = [
     headline: "Unaccompanied barracks neglect — and the parents who still showed up.",
     story:
       "A young Marine's parents drove hours with supplies while work orders stalled. Sponsorship funds barracks documentation, dignity reporting without pity framing, and follow-ups that ask whether remediation was real or cosmetic.",
-    imageUrl: "/images/homecoming-embrace.jpg",
+    imageUrl: "/images/family-brooks.jpg",
     goalCents: 450000,
     raisedCents: 276000,
     featured: false,
@@ -347,7 +347,7 @@ const families = [
     headline: "Older veteran caregiver load — when clinics go quiet after the uniform comes off.",
     story:
       "An aging Air Force veteran and adult children colliding with deferred referrals and stalled claims. Sponsorship funds clinic-timeline reporting, caregiver relief hours, and a one-year diary that refuses pity framing.",
-    imageUrl: "/images/care-hands.jpg",
+    imageUrl: "/images/family-ellison.jpg",
     goalCents: 580000,
     raisedCents: 149000,
     featured: true,
@@ -380,7 +380,7 @@ const families = [
     headline: "Joint-command handoffs — wrong office as a strategy.",
     story:
       "A complaint bounced between joint offices until the Romeros stopped expecting ownership. Sponsorship funds jurisdiction charting, family stability, and published seam maps so the next household is not orphaned by letterhead.",
-    imageUrl: "/images/community-women.jpg",
+    imageUrl: "/images/family-romero.jpg",
     goalCents: 720000,
     raisedCents: 88000,
     featured: true,
