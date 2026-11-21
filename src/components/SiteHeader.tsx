@@ -40,7 +40,7 @@ export function SiteHeader({ siteName }: { siteName: string }) {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-8">
         <Link
           href="/"
-          className="group min-w-0 shrink-0 bg-ink px-2 py-1.5 shadow-[var(--shadow-edge)] transition hover:opacity-95"
+          className="group min-w-0 shrink-0 transition hover:opacity-95"
           aria-label={siteName}
         >
           <Image
